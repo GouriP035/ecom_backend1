@@ -5,8 +5,8 @@ const router = require('./routes/authRoutes');
 const cartrouter = require('./routes/carRoutes');
 
 const app=express();
-const allowedOrigins=[ecom-frontend-teceh5ibc-gouramma-patils-projects.vercel.app,
-    ecom-frontend-orcin-one.vercel.app
+const allowedOrigins=["ecom-frontend-teceh5ibc-gouramma-patils-projects.vercel.app",
+    "ecom-frontend-orcin-one.vercel.app"
 ]
 app.use(cors({
     origin: function (origin, callback) {
