@@ -5,9 +5,21 @@ const router = require('./routes/authRoutes');
 const cartrouter = require('./routes/carRoutes');
 
 const app=express();
+const allowedOrigins=[ecom-frontend-teceh5ibc-gouramma-patils-projects.vercel.app,
+    ecom-frontend-orcin-one.vercel.app
+]
+app.use(cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true, // Allows cookies and authentication headers if needed
+  }
 
-
-app.use(cors())
+))
 app.use(express.json())
 
 
