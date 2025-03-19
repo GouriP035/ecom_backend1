@@ -1,5 +1,4 @@
 const Cart=require('../models/Cart')
-const user = require('../models/user')
 
 exports.addToCart=async(requestAnimationFrame,res)=>{
     const{productId,name,price}=requestAnimationFrame.body
